@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNEB Candidate Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/uneb-logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Uganda National Examinations Board</h1>
+            <h2>Candidate Registration Portal</h2>
+        </header>
+
+        <main>
+            <!-- Question 4a: Registration Form -->
+            <section class="form-section">
+                <h3>Candidate Registration Form</h3>
+                <form id="registrationForm" action="#" method="post">
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" 
+                               placeholder="Enter your full name" required>
+                    </div>
+
+                    <!-- UNEB Index Number -->
+                    <div class="form-group">
+                        <label for="indexNumber">UNEB Index Number *</label>
+                        <input type="text" id="indexNumber" name="indexNumber" 
+                               pattern="U\d{4}\/\d{3}\/\d{4}" 
+                               placeholder="Format: U1234/567/2025" 
+                               title="Format: UXXXX/XXX/XXXX" required>
+                        <small class="hint">Format: U1234/567/2025</small>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="dob" max="2025-12-31" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group">
+                        <label>Gender *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="Male" required> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                    </div>
+
+                    <!-- School/Center -->
+                    <div class="form-group">
+                        <label for="school">School/Center Name *</label>
+                        <select id="school" name="school" required>
+                            <option value="">-- Select School/Center --</option>
+                            <option value="Kampala High School">Kampala High School</option>
+                            <option value="St. Mary's College Kisubi">St. Mary's College Kisubi</option>
+                            <option value="Victoria University">Victoria University</option>
+                            <option value="Makerere University">Makerere University</option>
+                            <option value="Other">Other (Please specify)</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-submit">Register Candidate</button>
+                </form>
+            </section>
+
+            <!-- Question 4b: UNEB Site Button -->
+            <section class="links-section">
+                <h3>Official UNEB Resources</h3>
+                <button onclick="window.open('https://uneb.ac.ug', '_blank')" class="btn-uneb">
+                    🌐 Visit UNEB Official Website
+                </button>
+                <p class="note">Opens in new tab for reference</p>
+            </section>
+
+            <!-- Question 4c: Validation Notes -->
+            <section class="validation-notes">
+                <h3>Form Validation Rules</h3>
+                <ul>
+                    <li><strong>All fields</strong> marked with * are required</li>
+                    <li><strong>UNEB Index Number</strong> must follow format: UXXXX/XXX/XXXX</li>
+                    <li><strong>Date of Birth</strong> cannot be a future date</li>
+                    <li>Form will not submit if validation fails</li>
+                </ul>
+                <p><em>Comment in code: "Question c: Form validation" applied to input attributes</em></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 UNEB - Victoria University Web Design Exam Submission</p>
+            <p>Question 4: UNEB Registration Form</p>
+        </footer>
+    </div>
+
+    <!-- Question 4c: JavaScript Validation -->
+    <script src="script.js"></script>
+</body>
+</html>
